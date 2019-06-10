@@ -34,4 +34,10 @@ public class Student {
     public int getNumberOfExamsTaken () {
         return 0; // change
     }
+
+    public String getExamScores() {
+
+
+        return getExamScores();
+    }
 }
