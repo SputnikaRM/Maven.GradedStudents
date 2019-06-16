@@ -7,12 +7,12 @@ public class Student {
     String lastName;
     ArrayList<Double> examScores = new ArrayList<>();
 
-    public Student () {}
 
-    public Student(String firstName, String lastName, Double [] examScores){
+
+    public Student(String firstName, String lastName, ArrayList<Double> examScores){
         this.firstName=firstName;
         this.lastName=lastName;
-        // examscores;
+        this.examScores = new ArrayList<>();
     }
 
     public String getFirstName() {
@@ -32,12 +32,30 @@ public class Student {
     }
 
     public int getNumberOfExamsTaken () {
-        return 0; // change
+
+        return this.examScores.size(); // change
     }
 
     public String getExamScores() {
-
-
+        int count = 1;
+        String getExamScore = "";
+        for (int x=0; x<examScores.size();x++ ){
+            getExamScore +="Exam " +count + "  ->" + examScores.get(x);
+            count++;
+        }
         return getExamScores();
     }
+
+    public void addExamScore(double examScore) {
+        examScores.add(examScore);
+
+    }
+
+//    public void setExamScores (int examNumber, double newScore ) {
+//        examScores.get(examNumber) = newScore;
+//
+//    }
+
+
+
 }
