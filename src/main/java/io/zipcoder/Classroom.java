@@ -1,6 +1,7 @@
 package io.zipcoder;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Classroom {
     public Student [] students;
@@ -41,9 +42,30 @@ public class Classroom {
            arr.toArray();
             }
     public void removeStudents(String firstName, String lastName){
-        
+        ArrayList<Student> arr = new ArrayList<>();
+        for(int x=0; x<students.length;x++){
+            arr.add(students[x]);
+        }
+        for (int x=0; x<students.length;x++){
+            if((students[x].firstName == firstName) && (students[x].lastName== lastName)
+                arr.remove(students[x]);
+
+        }
+        arr.toArray();
+    }
+    public void getStudentsByScore(){
+        ArrayList<Student> arr =new ArrayList<>();
+        for(int x=0;x<students.length;x++)
+            arr.add(students[x]);
+        Collections.sort(arr,Collections.reverseOrder());
+        arr.toArray();
+
     }
 
+    public void getGradeBook(){
+        // gotta make a hashmap with student, string gradebook
+        
+    }
     }
 
 
