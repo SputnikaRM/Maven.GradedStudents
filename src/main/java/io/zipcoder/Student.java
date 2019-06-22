@@ -51,11 +51,36 @@ public class Student {
 
     }
 
-//    public void setExamScores (int examNumber, double newScore ) {
-//        examScores.get(examNumber) = newScore;
-//
-//    }
+    public void setExamScores(int examNumber, Double newScore){
+        examScores.set(examNumber-1,newScore);
+
+    }
+
+    public Double getAverageExamScore(){
+        Double sum = 0.0;
+        for(int x=0;x<examScores.size();x++){
+            sum+=examScores.get(x);
+        }
+        Double average = sum/examScores.size();
+        return average;
+
+    }
+
+    @Override
+    public String toString (){
+        String str = "Student Name :  "+ firstName +" "+lastName + "\n" + "> Average Score:  "+ getAverageExamScore()+
+                "\n" + "> Exam Score:  "+ "\n" + getExamScores();
+        return str;
+    }}
 
 
 
-}
+
+
+
+
+
+
+
+
+

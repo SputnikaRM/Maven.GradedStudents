@@ -58,7 +58,7 @@ public class StudentTest {
     public void setLastName() {
         Student testStudent = new Student("Will","Reyes",new ArrayList<Double>());
 
-        String expected = "William;
+        String expected = "William";
         testStudent.setLastName("William");
 
         String actual = testStudent.getLastName();
@@ -69,4 +69,4 @@ public class StudentTest {
 
 
 
-}
+    }
