@@ -2,6 +2,7 @@ package io.zipcoder;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 public class Classroom {
     public Student [] students;
@@ -63,9 +64,15 @@ public class Classroom {
     }
 
     public void getGradeBook(){
+
+        HashMap<Student,String> gradeBook = new HashMap<>();
+
+
+            }
+
         // gotta make a hashmap with student, string gradebook
-        
-    }
+
+
     }
 
 
